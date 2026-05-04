@@ -1,0 +1,27 @@
+Node* top , size = 0;
+
+push(x)
+{
+  Node* temp = new Node(x);
+  temp->next = top;
+  top = temp;
+  size +=1;
+}
+
+pop()
+{
+  Node* temp = top;
+  top = top->next;
+  delete temp;
+  size -= 1;
+}
+
+top()
+{
+  return top->data;
+}
+
+size()
+{
+  return size;
+}
