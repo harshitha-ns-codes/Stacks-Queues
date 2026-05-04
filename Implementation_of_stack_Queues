@@ -1,0 +1,22 @@
+queue<int>q
+{
+ push(x)
+{
+  q.push(x);
+  s = q.size();
+  for(int i =1; i<s;i++)
+  {
+    q.push(q.top());
+    q.pop();
+}
+}
+
+pop()
+{
+  q.pop();
+}
+
+top()
+{
+  return q.pop();
+}
